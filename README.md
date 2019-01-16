@@ -24,4 +24,6 @@ Ce procédé de création s’inspire des artistes pionniers dans le domaine de 
 * [Axidraw](www.axidraw.com)
 
 ### Liens
+* [History of computer art part 2 : plotters](http://piratefsh.github.io/2019/01/07/computer-art-history-part-2.html)
 * [Recode Project](www.recodeproject.com)
+
