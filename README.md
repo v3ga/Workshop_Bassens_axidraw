@@ -1,3 +1,5 @@
+![Axidraw v3](http://v3ga.github.io/Images/Workshop_Bassens_axidraw/axidraw_v3_grid.JPG)
+
 # Atelier d'initiation à Processing et au traceur Axidraw
 Julien Gachadoat accompagnera le public à la découverte de la programmation graphique et interactive avec Processing, un environnement permettant de s’initier au code créatif. 
 
