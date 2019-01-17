@@ -8,9 +8,10 @@ L’atelier sera consacré à la production de formes géométriques programmée
 Ce procédé de création s’inspire des artistes pionniers dans le domaine de la création d’œuvres imprimées produites à l’aide d’algorithmes dans les années 60.
 
 ## Mercredi 23 janvier 2019 
+### Après-midi 14h-17h
 * Présentation du studio [2Roqs](http://www.2roqs.fr) (30 minutes)
 * Présentation de quelques références historiques de la création d'images avec du code (30 minutes)
-* Initiations aux briques de la programmation : 
+* Initiations aux briques de la programmation (2h) 
   * Repère de dessin.
   * Fonctions de dessin.
   * Variables, conditions, boucles et fonctions.
