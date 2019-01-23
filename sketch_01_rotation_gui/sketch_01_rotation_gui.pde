@@ -69,6 +69,15 @@ void draw()
 }
 
 // --------------------------------------------------
+void keyPressed()
+{
+  if (key == 'e')
+  {
+    bExportSVG = true;
+  }
+}
+
+// --------------------------------------------------
 void circle(int nb, float radius)
 {
   beginShape();

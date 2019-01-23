@@ -1,23 +1,25 @@
-// Sketch inspiré de https://turtletoy.net/turtle/f8526463e9
 // --------------------------------------------------
 import processing.svg.*;
 import java.util.*;
+import controlP5.*;
 
 // --------------------------------------------------
 boolean bExportSVG = false;
 
 // --------------------------------------------------
-int nbPoints = 3;
-float nbFigures = 62;
-float angleRotation = PI/10;
-float nbTours = 3;
-float rayonDepart = 10;
-float croissance = 5;
+int resx = 20;
+int resy = 10;
+float margin = 30;
 
 // --------------------------------------------------
 void settings()
 {
   size(210*3, 300*3);
+}
+
+// --------------------------------------------------
+void setup()
+{
 }
 
 // --------------------------------------------------
@@ -29,24 +31,35 @@ void draw()
     beginRecord(SVG, "data/exports/svg/stripes_"+timestamp()+".svg");
   }
 
-  
-  // DÉBUT des commandes de dessin
-  noFill();
-  stroke(0);
+  float stepx = (width-2*margin) / float(resx);    
+  float stepy = (height-2*margin) / float(resy);    
 
-  pushMatrix();
-  translate(width/2, height/2);
-
-
-  for (int n=0; n<nbFigures; n++)
+  float x=margin, y=margin;
+  int i, j;
+  for (j=0; j<resy; j++)
   {
-    pushMatrix();
-    rotate( map( sin(nbTours*n/nbFigures*TWO_PI),-1,1, -angleRotation,angleRotation) );
-    circle(nbPoints, rayonDepart + croissance*n);
-    popMatrix();
+    x = margin;
+    for (i=0; i<resx; i++)
+    {
+      pushMatrix();
+      translate(x, y);
+
+      noFill();
+      stroke(0);
+      rectMode(CENTER);
+      pushMatrix();
+      translate(stepx/2,stepy/2);
+      // rotate( 0.15*radians( dist(x+stepx/2,y+stepy/2,width/2,height/2) ) );
+      rect( 0,0, 0.25*stepx, 0.95*stepy );
+      popMatrix();
+      
+      popMatrix();
+      x+=stepx;
+    }
+    y+=stepy;
   }
 
-  popMatrix();
+  // DÉBUT des commandes de dessin
 
   // FIN des commandes de dessin
 
@@ -64,18 +77,6 @@ void keyPressed()
   {
     bExportSVG = true;
   }
-}
-
-// --------------------------------------------------
-void circle(int nb, float radius)
-{
-  beginShape();
-  for (int i=0; i<nb; i++)
-  {
-    float angle = -PI/2+float(i)*TWO_PI/float(nb);
-    vertex( radius*cos(angle), radius*sin(angle) );
-  }
-  endShape(CLOSE);
 }
 
 // --------------------------------------------------
