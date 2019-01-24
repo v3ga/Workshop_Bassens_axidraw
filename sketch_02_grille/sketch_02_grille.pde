@@ -49,7 +49,7 @@ void draw()
       rectMode(CENTER);
       pushMatrix();
       translate(stepx/2,stepy/2);
-      // rotate( 0.15*radians( dist(x+stepx/2,y+stepy/2,width/2,height/2) ) );
+       rotate( 0.15*radians( dist(x+stepx/2,y+stepy/2,width/2,height/2) ) );
       rect( 0,0, 0.25*stepx, 0.95*stepy );
       popMatrix();
       
